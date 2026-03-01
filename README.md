@@ -7,35 +7,34 @@ In 2024, the structural department at **Hardesty & Hanover's Raleigh Office** wo
 > Previous to June 2025, teams were expected to achieve a 7-day turnaround from time of inspection to sumbission of report for each structure assigned.
 
 # How is Data Leveraged to Support the Bridge Inspection Team?
-
 Before inspections take place, data is collected for the structures to create a map for inspectors and to complete structure estimates for invoices to send to the DOT. Once a map is created, team leaders can plan out the month taking into account structure location and estimate inspection time based on structure type, structure square footage, structure condtion, and equipment needed for each structure.
 
 The data collected also allows the team to gain insights into the general performance of the team in relation to the structures assigned by the DOT and help prove to the DOT that the team is reliable in completing the assignments each month.
 
 A dashboard was created for the `Project Manager` to have a quick overview on DOT Assignments, to show `DOT` the team's progress over the contract lifetime when bidding for renewal, and to show team metrics when bidding for new opportunites. A GIS excel sheet was created to aid the `Inspection Scheduler` in creating maps and assigning trips efficiently.
 
-<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/300 Reports/303 Dashboards/dashboard-01.png">
+<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/blob/main/300%20Reports/303%20Dashboards/dashboard-01.png">
 
-<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/300 Reports/302 Operational Tools/operational-tools-01.png">
+<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/blob/main/300%20Reports/302%20Operational%20Tools/operational-tools-01.png">
 
 # Insights
 ## Increase in Square Footage Assigned/Inspected
-<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/300 Reports/304 Insights/insight-01.png">
+<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/blob/main/300%20Reports/304%20Insights/insight-01.png">
 
 The team is assigned various types and sizes of structures each month that attribute the total of square footage. It is one aspect, in conjunction with others such as number of structures assigned, structure grade, and assignment type, that affects workload in both inspecting and report writing. Specifically for square footage, if a structure is larger it may take more personnel and time to inspect and write than a smaller structure. 
 
 
 ## Increase in Number of Structures Assigned/Inspected
-<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/300 Reports/304 Insights/insight-02.png">
+<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/blob/main/300%20Reports/304%20Insights/insight-02.png">
 
 Taking a closer look into the assignments, in 2025 the DOT assigned 8 more structures between 15,000 and 60,000 square feet and 22 more structures below 15,000 square feet. The average number of structures assigned per month also increased and the team experience an all-time high in 2026 with 37 structures assigned in a month.
 
-<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/300 Reports/304 Insights/insight-03.png">
+<img src="https://github.com/pocamsenior/Bridge-Inspection-Team-Performance-Tracking/blob/main/300%20Reports/304%20Insights/insight-03.png">
 
 An increase in assigned structures also means an increase of reports that need to be written and submitted from the time of inspection until the end of the month.
 
 # Recommendations
-# Hire Additional Personnel to Keep Up with Assignments
+## Hire Additional Personnel to Keep Up with Assignments
 Even when omitting factors such as load ratings for Municipal assignments (see [Analyze How Municipal Workloads Affects State Workloads](#Analyze-How-Municipal-Workloads-Affect-State-Workloads) for more explanation), the nature of this project can very easily lead to burnout involving inspectors being over-worked. Not only are they out in the field during the week they are expected to write reports when returning back to the office. If a month consists of more than 20 bridges that could potentially mean an insuffcient to non-existent break before having to start on the next assignment. 
 
 Another problem that appears is when an inspector is performing field work, the team will inevitably have a pile of unwritten reports that need to be written by the inspector once they return to the office. Although this is meant to insure they have sufficient work during their in-office week, it could easily become overwhelming if reports are either longer than average or more involved because structure conditions have declined. If the inspector is expected to return to the field next week, this leaves unwritten or half-written reports until they return as their pile grows from their next in-field week.
