@@ -1,0 +1,24 @@
+﻿DEFINE
+
+TABLE _measure = {BLANK()}
+
+TABLE tblStructures = SELECTCOLUMNS(
+		ADDCOLUMNS(NATURALINNERJOIN(tblAssignments, SELECTCOLUMNS(tblAssignedStructures, [Structure Number], [Deck Width], [Structure Length])),"Square Footage", FLOOR([Total Square Footage Assigned],1)), 
+		"Deck Width", [Deck Width], "Structure Length", [Structure Length], "Year Assigned", [Year Assigned], "Square Footage", [Square Footage]
+		)
+		
+VAR tblStructures_Filtered = 
+	FILTER(tblStructures,[Square Footage] < 15000 && [Year Assigned] < 2026)
+	
+	
+MEASURE _measure[countStructures] =
+	VAR _selectedYear = SELECTEDVALUE(tblStructures[Year Assigned])
+
+RETURN 
+	COUNTROWS(FILTER(tblStructures_Filtered, [Year Assigned] = _selectedYear))
+
+TABLE tblSQFTCount = SUMMARIZE(tblStructures_Filtered,[Year Assigned], "# of Structures", [countStructures])
+
+EVALUATE
+ADDCOLUMNS(tblSQFTCount,"Difference from Previous Year", 
+IF(ISBLANK(SELECTCOLUMNS(FILTER(tblSQFTCount, [Year Assigned] = EARLIER([Year Assigned])-1),[# of Structures])), BLANK(), [# of Structures] - SELECTCOLUMNS(FILTER(tblSQFTCount, [Year Assigned] = EARLIER([Year Assigned])-1),[# of Structures])))

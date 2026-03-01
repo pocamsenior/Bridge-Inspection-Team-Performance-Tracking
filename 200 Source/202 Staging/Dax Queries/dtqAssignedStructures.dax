@@ -1,0 +1,39 @@
+﻿/* 
+=========================================================================================
+Cleaned Assigned Structures (100 Data/102 CSV/02 Cleaned/dtqAssignedStructures)
+=========================================================================================
+# Query Definition
+This query joins dtAssignments and dtAssignedStructures to output a consolidated Assigned Structures table for easier processing by PowerBI
+=========================================================================================
+*/
+
+DEFINE
+VAR _AssignedStructures = NATURALLEFTOUTERJOIN(dtAssignments, dtStructureData)
+
+EVALUATE
+SELECTCOLUMNS
+	(_AssignedStructures,
+		"Structure Number", dtStructureData[Structure Number],
+		"Structure Type", dtStructureData[Structure Type],
+		"Parallel Structure", dtStructureData[Parallel Structure],
+		"County", dtStructureData[County],
+		"Division", dtStructureData[Division],
+		"Structure Length", dtStructureData[Structure Length],
+		"Deck Width", dtStructureData[Deck Width],
+		"Deck Condition", dtStructureData[Deck Condition],
+		"Superstructure Condition", dtStructureData[Superstructure Condition],
+		"Substructure Condition", dtStructureData[Substructure Condition],
+		"Culvert Condition", dtStructureData[Culvert Condition],
+		"Year Built", dtStructureData[Year Built],
+		"Year Reconstructed", dtStructureData[Year Reconstructed],
+		"Latitude", dtStructureData[Latitude],
+		"Longitude", dtStructureData[Longitude],
+		"Google Maps Url", dtStructureData[Google Maps Url],
+		"Superstructure", dtStructureData[Superstructure],
+		"Substructure", dtStructureData[Substructure],
+		"Feature Carried",dtStructureData[Feature Carried],
+		"Feature Intersected",dtStructureData[Feature Intersected]
+	)
+
+ORDER BY
+	[Structure Number]

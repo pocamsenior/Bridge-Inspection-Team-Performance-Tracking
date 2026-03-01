@@ -1,0 +1,16 @@
+﻿/* 
+=========================================================================================
+Cleaned Assignments (100 Data/102 CSV/02 Cleaned/dtqAssignments)
+=========================================================================================
+# Query Definition
+This query outputs the dtAssignments table for easier processing by PowerBI
+=========================================================================================
+*/
+
+EVALUATE
+dtAssignments
+ORDER BY
+    dtAssignments[Year Assigned],
+    dtAssignments[Month Assigned],
+    dtAssignments[Assignment Type],
+    dtAssignments[Structure Number]

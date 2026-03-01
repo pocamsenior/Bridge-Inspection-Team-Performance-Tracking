@@ -1,0 +1,54 @@
+﻿/* 
+=========================================================================================
+Monthly Assigned Structures Report (100 Data/102 CSV/03 Updated/Assigned Structures)
+=========================================================================================
+# Query Definition
+This query joins tblAssignments and tblAssignedStructures to output assignments from a specific month/year to update structure information
+
+## User Actions
+Update _Year and _Month for the year/month of the assignment that needs data to be updated
+=========================================================================================
+*/
+
+
+DEFINE
+VAR _AssignedStructures = 
+SELECTCOLUMNS (NATURALLEFTOUTERJOIN(tblAssignments, tblAssignedStructures),
+		"Year Assigned", tblAssignments[Year Assigned],
+		"Month Assigned", tblAssignments[Month Assigned],
+		"Assignment Type", tblAssignments[Assignment Type],
+		"Structure Number", tblAssignedStructures[Structure Number],
+		"Structure Type", tblAssignedStructures[Structure Type],
+		"Parallel Structure", tblAssignedStructures[Parallel Structure],
+		"County", tblAssignedStructures[County],
+		"Division", tblAssignedStructures[Division],
+		"Structure Length", tblAssignedStructures[Structure Length],
+		"Deck Width", tblAssignedStructures[Deck Width],
+		"Deck Condition", tblAssignedStructures[Deck Condition],
+		"Superstructure Condition", tblAssignedStructures[Superstructure Condition],
+		"Substructure Condition", tblAssignedStructures[Substructure Condition],
+		"Culvert Condition", tblAssignedStructures[Culvert Condition],
+		"Year Built", tblAssignedStructures[Year Built],
+		"Year Reconstructed", tblAssignedStructures[Year Reconstructed],
+		"Latitude", tblAssignedStructures[Latitude],
+		"Longitude", tblAssignedStructures[Longitude],
+		"Google Maps Url", tblAssignedStructures[Google Maps Url],
+		"Superstructure", tblAssignedStructures[Superstructure],
+		"Substructure", tblAssignedStructures[Substructure],
+		"Feature Carried",tblAssignedStructures[Feature Carried],
+		"Feature Intersected",tblAssignedStructures[Feature Intersected]
+	)
+
+VAR _Year = 2026
+VAR _Month = 2
+
+EVALUATE
+	FILTER(_AssignedStructures,
+		[Year Assigned] = _Year && [Month Assigned] = _Month
+	)
+
+ORDER BY
+	[Year Assigned],
+	[Month Assigned],
+	[Assignment Type],
+	[Structure Number]

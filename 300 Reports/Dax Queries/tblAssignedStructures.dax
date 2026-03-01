@@ -1,0 +1,13 @@
+﻿/* 
+=========================================================================================
+Assigned Structures (300 Reports/301 Data/Assigned Structure Data)
+=========================================================================================
+# Query Definition
+This query outputs the tblAssignedStructures table for reporting purposes
+=========================================================================================
+*/
+
+EVALUATE tblAssignedStructures
+
+ORDER BY
+	[Structure Number]

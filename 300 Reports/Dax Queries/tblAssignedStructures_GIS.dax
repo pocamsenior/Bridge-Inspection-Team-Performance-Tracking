@@ -1,0 +1,30 @@
+﻿/* 
+=========================================================================================
+Assigned Structures (300 Reports/301 Data/Assigned Structure Data GIS)
+=========================================================================================
+# Query Definition
+This query outputs a GIS variant of the tblAssignedStructures table for reporting purposes
+=========================================================================================
+*/
+
+EVALUATE SELECTCOLUMNS (NATURALLEFTOUTERJOIN(tblAssignments, tblAssignedStructures),
+		"Year Assigned", tblAssignments[Year Assigned],
+		"Month Assigned", tblAssignments[Month Assigned],
+		"Assignment Type", tblAssignments[Assignment Type],
+		"Structure Number", tblAssignedStructures[Structure Number],
+		"Structure Type", tblAssignedStructures[Structure Type],
+		"County", tblAssignedStructures[County],
+		"Latitude", tblAssignedStructures[Latitude],
+		"Longitude", tblAssignedStructures[Longitude],
+		"Google Maps Url", tblAssignedStructures[Google Maps Url],
+		"Superstructure", tblAssignedStructures[Superstructure],
+		"Substructure", tblAssignedStructures[Substructure],
+		"Feature Carried", tblAssignedStructures[Feature Carried],
+		"Feature Intersected", tblAssignedStructures[Feature Intersected]
+	)
+	
+ORDER BY
+	[Year Assigned],
+	[Month Assigned],
+	[Assignment Type],
+	[Structure Number]

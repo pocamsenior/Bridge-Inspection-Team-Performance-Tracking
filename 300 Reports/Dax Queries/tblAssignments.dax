@@ -1,0 +1,16 @@
+﻿/* 
+=========================================================================================
+Assignments (300 Reports/301 Data/Assignments)
+=========================================================================================
+# Query Definition
+This query outputs the tblAssignments table for reporting purposes
+=========================================================================================
+*/
+
+EVALUATE tblAssignments
+
+ORDER BY
+	[Year Assigned],
+	[Month Assigned],
+	[Assignment Type],
+	[Structure Number]
