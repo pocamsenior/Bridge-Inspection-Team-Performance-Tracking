@@ -63,4 +63,4 @@ gblObjects = (path) =>
 ]
 
 in 
-    try gblObjects(cloudMac) otherwise gblObjects(projectsPC)
+    if Table.RowCount(Table.SelectRowsWithErrors(Record.ToTable(gblObjects(cloudMac)))) > 0 then gblObjects(projectsPC) else gblObjects(cloudMac)
