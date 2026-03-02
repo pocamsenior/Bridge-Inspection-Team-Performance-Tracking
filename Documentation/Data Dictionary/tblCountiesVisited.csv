@@ -1,0 +1,5 @@
+Name,Data Type,Definition,Formula,Use Case,Source,Format,Example
+Average Latitude,Decimal,Average longitude of all structures in the county,,Outline county in visual map,[Average Latitude],,36.0756
+Average Longitude,Decimal,Average longitude of all structures in the county,,Outline county in visual map,[Average Longitude],,-80.457770
+County,Text,County Name,,,{tblAssignedStructures[County]},,ASHE
+Latest Year Visited,Integer,Latest year the county was visited,MAX(tblAssignments[Year Assigned]),Color county in visual map based on year visited,{tblAssignments[Year Assigned]},,2025

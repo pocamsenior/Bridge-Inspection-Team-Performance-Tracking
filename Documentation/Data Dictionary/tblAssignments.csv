@@ -1,0 +1,6 @@
+Name,Data Type,Definition,Source,Format,Contraints,Example
+Assignment Type,Text,Whether the structure is apart of a state assignment or municipal assignment,DOT assignment document,,State / Municipal,Municipal
+Month Assigned,Integer,Month the structure is assigned,DOT assignment document,,1-12,5
+Month Name,Text,The short name of the month the structure is assigned,{tblAssignments[Month Assigned]},MMM,,Mar
+Structure Number,Integer,Unique Identification of structure,DOT assignment document,000000,Must be 6 digits with leading zeros,910562
+Year Assigned,Integer,Year the structure is assigned,DOT assignment document,,,2024

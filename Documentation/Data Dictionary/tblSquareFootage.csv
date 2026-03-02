@@ -1,0 +1,6 @@
+Name,Data Type,Definition,Formula,Use Case,Source,Format,Example
+Bin Name,Text,Average longitude of all structures in the county,CEILING((Bin Number -1) * [Square Footage Bin Size])/1000 & " k - " & FLOOR(Bin Number * [Square Footage Bin Size])/1000,Name groups of data for distributions,,,15k-30k
+Bin Number,Integer,The group a structure number is placed in based on Square Footage,,Vizualize distributions,Square Footage,,2
+Square Footage,Decimal,Square Footage of Structure,FLOOR(Square Footage / Bin Size),,[Total Square Footage Assigned],,325
+Structure Number,Integer,Unique Identification of structure,,,{tblAssignments[Structure Number]},000000,Must be 6 digits with leading zeros,002562
+Year Assigned,Integer,Year the structure is assigned,,,{tblAssignments[Year Assigned]},,2024

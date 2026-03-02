@@ -1,0 +1,21 @@
+Name,Data Type,Definition,Source,Format,Contraints,Example
+County,Text,County in which the structure is located,DOT,Uppercase,,YADKIN
+Culvert Condition,Integer,Grade given to a structure if it is a culvert,NBI,,1-9,5
+Deck Condition,Integer,Grade giving to a structure's deck component,NBI,,1-9,8
+Deck Width,Decimal,Out-to-Out measurment of a structure,NBI,,,26.25
+Division,Integer,Division number assigned by the state government,DOT,,,56
+Feature Carried,Text,Feature that runs along the top of the structure,DOT,Uppercase,,SR1125
+Feature Intersected,Text,Feature that runs below the structure,DOT,Uppercase,,BUFFALOE CREEK
+Google Maps Url,Text,Google maps link to the location of the structure,DOT,,,https://maps.app.goo.gl/B6AihW8NkkGGyxiX9
+Latitude,Decimal,Latitude componente of the coordinate,DOT,,,36.58921
+Longitude,Decimal,Longitude component of the coordinate,DOT,,,-76.8950
+Parallel Structure,Text,The side in which the structure is located if there is another structure parellel to it,NBI,,R / L,R
+Structure Length,Decimal,Length measurement of structure,NBI,,,125.65
+Structure Number,Integer,Unique Identification of structure,DOT / NBI,000000,Must be 6 digits with leading zeros,002562
+Structure Type,Text,Type of structure,DOT,Uppercase,Bridge / Culvert / Pipe / Tunnel / Pedestrian Walkway,PIPE
+Substructure,Text,Description of structure's substructure component,DOT,Uppercase,,E.BTS: RC CAPS / H-PILES
+Substructure Condition,Integer,Grade given to a structure's substructure components,NBI,,1-9,9
+Superstructure,Text,Description of structure's superstructure component,DOT,Uppercase,,TIMBER FLOOR ON I-BEAMS
+Superstructure Condition,Integer,Grade given to a structure's superstructure components,NBI,,1-9,3
+Year Built,Integer,Year structure was originally constructed,NBI,,,1995
+Year Reconstructed,Integer,Year structure was reconstru,NBI,,,2024
