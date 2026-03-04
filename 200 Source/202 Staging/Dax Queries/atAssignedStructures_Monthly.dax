@@ -40,7 +40,7 @@ SELECTCOLUMNS (NATURALLEFTOUTERJOIN(tblAssignments, tblAssignedStructures),
 	)
 
 VAR _Year = 2026
-VAR _Month = 2
+VAR _Month = 5
 
 EVALUATE
 	FILTER(_AssignedStructures,
