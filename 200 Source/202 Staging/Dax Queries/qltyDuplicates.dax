@@ -1,0 +1,40 @@
+﻿/* 
+=========================================================================================
+Pending Duplicate Structures (200 Source / 201 Global / Lists)
+=========================================================================================
+# Query Definition
+This query joins finds pending duplicate structure numbers that need to be handled for the final analysis table
+=========================================================================================
+*/
+
+
+DEFINE
+TABLE tbl = SELECTCOLUMNS(dtqAssignedStructures, "Structure Number", [Structure Number])
+
+MEASURE tbl[_duplicateCount] =
+VAR _selectedStructure = SELECTEDVALUE(tbl[Structure Number])
+
+RETURN COUNTX(FILTER (tbl, tbl[Structure Number] = _selectedStructure ),
+tbl[Structure Number])
+
+
+MEASURE tbl[_handledDuplicates] =
+VAR _selectedStructure = SELECTEDVALUE(tbl[Structure Number])
+
+RETURN COUNTROWS(FILTER (qtblFilteredDuplicates, [Structure Number] = _selectedStructure ))
+
+
+VAR _tblDuplicates = FILTER(ADDCOLUMNS(SUMMARIZE(tbl, [Structure Number]),"Count", [_duplicateCount]),[Count] > 1)
+
+VAR _tblPendingDuplicates = ADDCOLUMNS(_tblDuplicates, "Handled", [_handledDuplicates])
+
+
+// Pending Duplicates
+EVALUATE
+FILTER(_tblPendingDuplicates, ISBLANK([Handled]))
+
+ORDER BY [Structure Number]
+
+// Compare Duplicates for Selection
+EVALUATE
+FILTER(dtqAssignedStructures, [Structure Number] ="")
